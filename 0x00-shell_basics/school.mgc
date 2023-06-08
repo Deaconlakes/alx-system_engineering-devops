@@ -1,2 +1,4 @@
 #!/bin/bash
-file -m school.mgc
+cat > 0 string SCHOOL School data
+!:mime School
+file -C -m school.magic
