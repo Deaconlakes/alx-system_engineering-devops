@@ -1,6 +1,9 @@
-fest to fix a bug in wp-setings.php
+# find out why Apache is returning a error
+# fixes bad phpp extension to php
 
-exec { 'fix the php extension issue':
-  command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
-  path    => '/usr/local/bin/:/bin/'
+$update_file = '/var/www/html/wp-settings.php'
+
+exec { 'fixed-phpp':
+    command => "sed -i 's/phpp/php/g' ${update_file}",
+    path    => ['/bin', '/usr/bin']
 }
